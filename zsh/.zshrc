@@ -74,7 +74,7 @@ setopt histignorespace
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-alias startx='ssh-agent startx'
+eval $(keychain --eval --agents ssh -Q --quiet $(ls $HOME/.ssh/*.pub | sed 's/\.pub//g' | xargs -L 1 echo -n " "))
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
