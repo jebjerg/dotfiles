@@ -20,7 +20,7 @@ function link_xorg() {
 
 function link_zsh() {
     ln -s $PWD/zsh/.zshrc $HOME/.zshrc >/dev/null 2>&1 || echo "Unable to symlink zsh"
-    ln -s $PWD/zsh/cheerful.zsh-theme $HOME/.oh-my-zsh/themes/cheerful.zsh-theme >/dev/null 2>&1 || echo "Unable to symlink zsh theme"
+    ln -s $PWD/zsh/*.zsh-theme $HOME/.oh-my-zsh/themes/ >/dev/null 2>&1 || echo "Unable to symlink zsh theme"
 }
 
 [[ $# -gt 0 ]] && for ARG in $*
