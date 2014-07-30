@@ -55,6 +55,10 @@ export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl"
 export PATH="$PATH:/usr/lib/notion/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+unsetopt inc_append_history
+unsetopt share_history
+setopt histignorespace
+
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
