@@ -19,7 +19,7 @@ local taskw_timer
 local metric_na = "!?!?"
 
 local function get_taskw_count()
-	local hps = io.popen("task status:pending due:today count 2>/dev/null")
+	local hps = io.popen("task status:pending count 2>/dev/null")
 	if not hps then
 		return metric_na
 	end
