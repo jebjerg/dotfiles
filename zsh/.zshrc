@@ -20,7 +20,7 @@ ZSH_THEME="cheerful" # based on Soliah
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
+DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -90,3 +90,14 @@ eval $(keychain --eval --agents ssh -Q --quiet $(ls $HOME/.ssh/*.pub | sed 's/\.
 export PAGER='vimpager'
 alias less=$PAGER
 [[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+
+export TITLE=
+function set_title() {
+    case $TERM in
+        xterm*)
+            print -Pn "\e]2;$TITLE %n@%m:%~\a"
+            ;;
+    esac
+}
+precmd() { set_title }
+
