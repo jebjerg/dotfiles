@@ -61,6 +61,9 @@ setopt histignorespace
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
+# Go
+export GOPATH=$HOME/go
+export PATH=$PATH:$HOME/go/bin
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
