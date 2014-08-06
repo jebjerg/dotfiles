@@ -97,3 +97,6 @@ let g:lasttab = 1
 nmap tt :exe "tabn ".g:lasttab<CR>
 nmap <C-n> :NERDTreeToggle<CR>
 au TabLeave * let g:lasttab = tabpagenr()
+
+" templates
+au BufNewFile *.go 0r ~/.vim/templates/go.skel | let IndentStyle = "go"
