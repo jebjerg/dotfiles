@@ -14,7 +14,7 @@ function link_notion() {
 }
 
 function link_tmux() {
-    [[ ! -f $HOME/.tmux.conf ]] && [[ ! -L $HOME/.tmux.conf ]] && ln -s $PWD/vim/.tmux.conf $HOME/.tmux.conf >/dev/null 2>&1 || echo "Unable to link tmux"
+    [[ ! -f $HOME/.tmux.conf ]] && [[ ! -L $HOME/.tmux.conf ]] && ln -s $PWD/tmux/.tmux.conf $HOME/.tmux.conf >/dev/null 2>&1 || echo "Unable to link tmux"
 }
 
 function link_vim() {
