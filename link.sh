@@ -4,6 +4,10 @@ function usage() {
     echo "Usage: link.sh all|[notion|vim|xorg|zsh]+"
 }
 
+function link_fish() {
+    ln -s $PWD/fish/config.fish $HOME/.config/fish/config.fish >/dev/null 2>&1 || echo "Unable to symlink fish"
+}
+
 function link_notion() {
     [[ ! -d $HOME/.notion ]] && mkdir $HOME/.notion
     [[ -d $HOME/.notion ]] && ln -s $PWD/notion/*.lua $HOME/.notion/ >/dev/null 2>&1 || echo "Unable to symlink notion"
@@ -11,6 +15,7 @@ function link_notion() {
 
 function link_vim() {
     ln -s $PWD/vim/.vimrc $HOME/.vimrc >/dev/null 2>&1 || echo "Unable to symlink vim"
+    ([[ -d $HOME/.vim/ ]] && [[ ! -d $HOME/.vim/templates ]] && ln -s $PWD/vim/templates $HOME/.vim/) || echo "Unable to link templates"
 }
 
 function link_xorg() {
@@ -26,6 +31,9 @@ function link_zsh() {
 [[ $# -gt 0 ]] && for ARG in $*
 do
     case $ARG in
+        fish)
+            link_fish
+            ;;
         notion)
             link_notion
             ;;
@@ -39,6 +47,7 @@ do
             link_zsh
             ;;
         all)
+            link_fish
             link_notion
             link_vim
             link_xorg

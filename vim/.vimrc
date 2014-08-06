@@ -72,7 +72,7 @@ let g:pymode_folding = 0
 NeoBundle 'vim-scripts/DrawIt'
 
 " GITGUTTER
-NeoBundle 'airblade/vim-gitgutter'
+" NeoBundle 'airblade/vim-gitgutter'
 
 " NERDTREE
 NeoBundle 'scrooloose/nerdtree'
