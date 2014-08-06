@@ -1,7 +1,7 @@
 #!/bin/bash
 # use repo as PWD
 function usage() {
-    echo "Usage: link.sh all|[notion|vim|xorg|zsh]+"
+    echo "Usage: link.sh all|[fish|notion|tmux|vim|xorg|zsh]+"
 }
 
 function link_fish() {
@@ -11,6 +11,10 @@ function link_fish() {
 function link_notion() {
     [[ ! -d $HOME/.notion ]] && mkdir $HOME/.notion
     [[ -d $HOME/.notion ]] && ln -s $PWD/notion/*.lua $HOME/.notion/ >/dev/null 2>&1 || echo "Unable to symlink notion"
+}
+
+function link_tmux() {
+    [[ ! -f $HOME/.tmux.conf ]] && [[ ! -L $HOME/.tmux.conf ]] && ln -s $PWD/vim/.tmux.conf $HOME/.tmux.conf >/dev/null 2>&1 || echo "Unable to link tmux"
 }
 
 function link_vim() {
@@ -37,6 +41,9 @@ do
         notion)
             link_notion
             ;;
+        tmux)
+            link_tmux
+            ;;
         vim)
             link_vim
             ;;
@@ -49,6 +56,7 @@ do
         all)
             link_fish
             link_notion
+            link_tmux
             link_vim
             link_xorg
             link_zsh
