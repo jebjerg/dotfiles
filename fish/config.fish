@@ -1,8 +1,8 @@
 set fish_greeting ""
 set fish_path $HOME/.config/fish
  
-set -x PATH "/bin:/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl:usr/lib/notion/bin"
-set -x PYTHONPATH ".:$PYTHONPATH"
+set -x PATH $PATH /bin /usr/local/sbin /usr/local/bin /usr/bin /usr/bin/core_perl usr/lib/notion/bin
+set -x PYTHONPATH ". $PYTHONPATH"
 set -x PAGER vimpager
 alias less=$PAGER
  
