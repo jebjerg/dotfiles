@@ -9,6 +9,7 @@ au BufRead,BufNewFile *.go set filetype=go
 au BufRead,BufNewFile *.go :compiler go
 au FileType go setl sw=4 sts=4 noexpandtab
 set rtp+=/usr/local/go/misc/vim/
+set rtp+=/usr/share/go/misc/vim/
 autocmd BufWritePre *.go :silent Fmt
 let g:compiler_gcc_ignore_unmatched_lines = 1
 
