@@ -103,3 +103,6 @@ au TabLeave * let g:lasttab = tabpagenr()
 
 " templates
 au BufNewFile *.go 0r ~/.vim/templates/go.skel | let IndentStyle = "go"
+
+vnoremap <leader>64 c<c-r>=system('base64',@")<cr><esc>
+vnoremap <leader>64d c<c-r>=system('base64 --decode',@")<cr><esc>
