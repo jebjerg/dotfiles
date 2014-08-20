@@ -42,6 +42,10 @@ end
 function git_info
     if git rev-parse --git-dir > /dev/null 2>&1
         set last_commit (git log --pretty=format:'%at' -1 2> /dev/null)
+        if test $status -ne 0
+            printf "±∞"
+            return
+        end
         set now (date +%s)
         set seconds_since_last_commit (math "$now-$last_commit")
  
