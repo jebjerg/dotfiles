@@ -15,6 +15,7 @@ let g:compiler_gcc_ignore_unmatched_lines = 1
 
 filetype plugin indent on
 syntax on
+set number
 
 if has('vim_starting')
     set nocompatible               " Be iMproved
