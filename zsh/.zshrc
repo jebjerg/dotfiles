@@ -101,3 +101,4 @@ function set_title() {
 }
 precmd() { set_title }
 
+[[ -f $HOME/.local.zshrc ]] && source $HOME/.local.zshrc
