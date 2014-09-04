@@ -101,4 +101,6 @@ function set_title() {
 }
 precmd() { set_title }
 
+bindkey -v
+
 [[ -f $HOME/.local.zshrc ]] && source $HOME/.local.zshrc
