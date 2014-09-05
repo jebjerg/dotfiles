@@ -89,7 +89,8 @@ NeoBundle 'scrooloose/nerdtree'
 
 " Required:
 call neobundle#end()
-colorscheme carvedwoodcool
+colorscheme solarized
+set background=dark
 
 " Required:
 filetype plugin indent on
