@@ -4,6 +4,13 @@ set expandtab
 set encoding=utf-8
 let mapleader = ","
 
+" GVIM
+set guioptions-=M  "dont source menu script
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+
 " GOLANG
 au BufRead,BufNewFile *.go set filetype=go
 au BufRead,BufNewFile *.go :compiler go
