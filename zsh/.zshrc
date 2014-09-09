@@ -102,5 +102,9 @@ function set_title() {
 precmd() { set_title }
 
 bindkey -v
+bindkey '^R' history-incremental-search-backward
+bindkey '^S' history-incremental-search-forward
+bindkey '^P' history-search-backward
+bindkey '^N' history-search-forward
 
 [[ -f $HOME/.local.zshrc ]] && source $HOME/.local.zshrc
