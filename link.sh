@@ -30,7 +30,7 @@ function link_vim() {
 
 function link_xorg() {
     ln -s $PWD/xorg/.xinitrc $HOME/.xinitrc >/dev/null 2>&1 || echo "Unable to symlink xinitc"
-    ln -s $PWD/xorg/.Xresources $HOME/.Xresources >/dev/null 2>&1 || echo "Unable to symlink Xresources"
+    ln -s $PWD/xorg/.Xdefaults $HOME/.Xdefaults >/dev/null 2>&1 || echo "Unable to symlink Xdefaults"
 }
 
 function link_zsh() {

@@ -2,6 +2,7 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set encoding=utf-8
+set termencoding=utf-8
 let mapleader = ","
 
 " GVIM
@@ -30,6 +31,10 @@ if has('vim_starting')
     " Required:
     set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
+
+" folds
+set foldmethod=indent
+set foldlevel=1
 
 " Required:
 call neobundle#begin(expand('~/.vim/bundle'))
@@ -87,10 +92,23 @@ NeoBundle 'vim-scripts/DrawIt'
 " NERDTREE
 NeoBundle 'scrooloose/nerdtree'
 
+" <opt bundles
+NeoBundle 'mhinz/vim-startify'
+NeoBundle 'danro/rename.vim'
+NeoBundle 'majutsushi/tagbar'
+NeoBundle 'Raimondi/delimitMate'
+NeoBundle 'justinmk/vim-sneak'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'scrooloose/nerdcommenter'
+
+" tagbar
+let g:tagbar_width = '20'
+let g:tagbar_show_linenumbers = '0'
+let g:tagbar_iconchars =[' ▸', ' ▾']
+" opt bundles>
+
 " Required:
 call neobundle#end()
-colorscheme solarized
-set background=dark
 
 " Required:
 filetype plugin indent on
@@ -115,3 +133,28 @@ au BufNewFile *.go 0r ~/.vim/templates/go.skel | let IndentStyle = "go"
 
 vnoremap <leader>64 c<c-r>=system('base64',@")<cr><esc>
 vnoremap <leader>64d c<c-r>=system('base64 --decode',@")<cr><esc>
+
+" colors
+set t_Co=256
+hi CursorLine ctermbg=7 cterm=bold
+hi CursorLineNr ctermfg=238 ctermbg=235
+hi LineNr ctermfg=7
+hi Constant ctermfg=2
+hi Statement ctermfg=1
+hi MatchParen ctermfg=8 ctermbg=none cterm=none
+hi TabLineFill term=bold cterm=bold ctermbg=none
+hi TabLine ctermfg=15 ctermbg=none cterm=none
+hi TabLineSel ctermfg=Black ctermbg=none cterm=none
+hi VertSplit ctermfg=235 ctermbg=235 cterm=none
+hi StatusLine cterm=none ctermfg=0 ctermbg=7
+hi StatusLineNC cterm=none ctermfg=235 ctermbg=235
+hi Normal ctermfg=0 ctermbg=none
+hi Directory ctermfg=4 cterm=none
+hi Folded ctermbg=235 cterm=none
+hi SpecialKey ctermfg=7
+hi Nontext ctermfg=7
+hi TagbarIcon ctermfg=red cterm=none
+hi TagbarHighlight ctermfg=red ctermbg=none
+hi TagbarScope ctermfg=blue ctermbg=none cterm=none
+hi TagbarKind ctermfg=blue ctermbg=none cterm=none
+hi TagbarNestedKind ctermbg=blue ctermbg=none cterm=none
