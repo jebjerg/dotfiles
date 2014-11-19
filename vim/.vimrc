@@ -148,7 +148,7 @@ hi TabLineSel ctermfg=Black ctermbg=none cterm=none
 hi VertSplit ctermfg=235 ctermbg=235 cterm=none
 hi StatusLine cterm=none ctermfg=0 ctermbg=7
 hi StatusLineNC cterm=none ctermfg=235 ctermbg=235
-hi Normal ctermfg=0 ctermbg=none
+hi Normal ctermfg=7 ctermbg=none
 hi Directory ctermfg=4 cterm=none
 hi Folded ctermbg=235 cterm=none
 hi SpecialKey ctermfg=7

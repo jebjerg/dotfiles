@@ -1,46 +1,39 @@
-! black
-URxvt*color15  : #66666a
-URxvt*color7  : #30303a
+*foreground:    #ddeedd
+*background:    #131D24
 
-! red
-URxvt*color1: #da637e
-URxvt*color9: #f0a3a3
+!black
+*color0:    #25374A
+*color8:    #3A526B
+!red
+*color1:    #BD4A4A
+*color9:    #CC6666
+!green
+*color2: #99ab6f
+*color10: #acb792
+!yellow
+*color3:    #FEA63C
+*color11:   #FFE863
+!blue
+*color4: #495d6e
+*color12: #687987
+!magenta
+*color5:    #F26B9E
+*color13:   #ff5879
+!cyan
+*color6:    #72AD8C
+*color14:   #9FE3BC
+!white
+*color7:    #DDEEDD
+*color15:   #FFFFFF
 
-! yellow/orange
-URxvt*color3: #ab93b9
-URxvt*color11: #cbb6d7
-
-! purple
-URxvt*color5: #ac8ac1
-URxvt*color13: #d2bbe4
-
-! blue
-URxvt*color4: #7787a3
-URxvt*color12: #a8c9eb
-
-! green
-URxvt*color2 : #b1b792
-URxvt*color10  : #C7E6B8
-
-! cyan
-URxvt*color6 : #63918b
-URxvt*color14  : #92b5b0
-
-! white
-URxvt*color0 : #b1b8c3
-URxvt*color8  : #cdcdcd
 
 URxvt*scrollBar: false
-URxvt*background: #20202f
-URxvt*foreground: #d2d2d2
 URxvt*cursorUnderline: true
-! URxvt*cursorColor: #20202f
-URxvt*colorUL: #9695b5
+URxvt*cursorColor: #CC6666
+URxvt*colorUL: #CC6666
 URxvt*internalBorder:7
-URxvt*borderColor: #20202f
 
 URxvt*font: xft:Liberation Mono:size=9
-URxvt*boldFont: xft:lemon:size=10
 URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
 

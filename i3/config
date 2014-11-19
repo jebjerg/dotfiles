@@ -117,6 +117,17 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+workspace 1 output VGA-0
+workspace 2 output DVI-D-0
+workspace 3 output VGA-0
+workspace 4 output DVI-D-0
+workspace 5 output VGA-0
+workspace 6 output DVI-D-0
+workspace 7 output VGA-0
+workspace 8 output DVI-D-0
+workspace 9 output VGA-0
+workspace 0 output DVI-D-0
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -150,12 +161,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-}
-
 # solarized colors
 set $base03     #002b36
 set $base02     #073642
@@ -173,12 +178,30 @@ set $violet     #6c71c4
 set $blue       #268bd2
 set $cyan       #2aa198
 set $green      #859900
+set $black      #000000
 
-# class         border  background  text    indicator
+# Start i3bar to display a workspace bar (plus the system information i3status
+# finds out, if available)
+#bar {
+#    status_command $HOME/.local/bin/conky-i3bar
+#    colors {
+##       class               border  background  text
+#        focused_workspace   $cyan $black     $blue
+#        active_workspace    $cyan $black     $base2
+#        inactive_workspace  #333333 #222222     #888888
+#        urgent_workspace    #2f343a #900000     #ffffff
+#
+#    }
+#}
+
+# class                 border  background  text        indicator
 # whitebox
-client.focused  $base02 $base2      $base03 $base3 
+client.focused          $base02 $base2      $base03     $base3 
 # redalert
-# client.focused          #994c4c #882828 #ffffff #f22e2e
+# client.focused          #994c4c #882828     #ffffff     #f22e2e
+# blue
+# client.focused          $cyan   $black      $blue       $blue
+# client.focused_inactive $cyan   $black      $base03     $base2
 
 bindsym $mod+z exec "i3lock -i lockbg.png"
 
@@ -187,7 +210,7 @@ bindsym $mod+minus scratchpad show
 
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3exit lock, mode "default"
+    bindsym l exec --no-startup-id i3lock -i lockbg.png, mode "default"
     bindsym e exec --no-startup-id i3exit logout, mode "default"
     bindsym s exec --no-startup-id i3exit suspend, mode "default"
     bindsym h exec --no-startup-id i3exit hibernate, mode "default"
@@ -199,4 +222,45 @@ mode "$mode_system" {
     bindsym Escape mode "default"
 }
 bindsym $mod+Pause mode "$mode_system"
+
+exec --no-startup-id i3-msg "workspace 1; exec urxvt -e ssh -t banksy screen -raAD; layout tabbed; workspace 1; exec urxvt -e ssh -t reek screen -raAD; workspace 1; exec urxvt -e ssh -t blackbox screen -r silc; workspace 1; exec skype; workspace 2"
+exec --no-startup-id i3-msg "workspace 2; layout tabbed; exec chrome"
+
+
+#bar {
+#    mode dock
+#    position bottom
+#    workspace_buttons yes
+#    tray_output none
+#    colors {
+#            background #161616
+#            statusline #605c5a
+#            focused_workspace #161616 #161616 #909737
+#            active_workspace #161616 #161616 #a5a5a5
+#            inactive_workspace #161616 #161616 #a5a5a5
+#            urgent_workspace #161616 #161616 #802828
+#    }
+#}
+bar {
+    mode dock
+    position bottom
+   workspace_buttons yes
+   tray_output none
+   status_command $HOME/.local/bin/conky-i3bar
+   colors {
+      background #101010
+      statusline #605c5a
+      focused_workspace #101010 #101010 #990000
+      active_workspace #5f5f5f #101010 #101010
+      inactive_workspace #101010 #101010 #5f5f5f
+    urgent_workspace #2e3436 #9a878f
+    }
+}
+#new_window 1pixel
+#new_float 1pixel
+client.focused          #E51717 #990000 #FFFFFF
+client.focused_inactive #191919 #191919 #999999
+client.unfocused        #191919 #191919 #999999
+client.urgent           #cd989a #cd989a #2e3436
+client.background       #121212
 
