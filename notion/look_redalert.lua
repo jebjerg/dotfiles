@@ -12,11 +12,11 @@ de.reset()
 
 -- Base style
 de.defstyle("*", {
-    -- e.g. inactive (not selected) tab in inactive group
+    -- e.g. inactive (not selected) tab in (in)active group
     highlight_colour = "#e51717",
     shadow_colour = "#e51717",
     background_colour = "#000000",
-    foreground_colour = "#e51717",
+    foreground_colour = "#6b6b6b",
     
     shadow_pixels = 1,
     highlight_pixels = 1,
