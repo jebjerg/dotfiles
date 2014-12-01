@@ -1,1 +1,1 @@
-dopath("look_dusky")
+dopath("look_redalert")
