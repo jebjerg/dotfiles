@@ -158,3 +158,5 @@ hi TagbarHighlight ctermfg=red ctermbg=none
 hi TagbarScope ctermfg=blue ctermbg=none cterm=none
 hi TagbarKind ctermfg=blue ctermbg=none cterm=none
 hi TagbarNestedKind ctermbg=blue ctermbg=none cterm=none
+
+autocmd FileType tex let b:tex_flavor = 'pdflatex'|compiler tex|set makeprg=pdflatex\ \-file\-line\-error\ \-interaction=nonstopmode\ %|set errorformat=%f:%l\ %m
