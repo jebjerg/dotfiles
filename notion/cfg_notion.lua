@@ -23,7 +23,7 @@ META="Mod1+"
 --ALTMETA=""
 
 -- Terminal emulator
---XTERM="xterm"
+XTERM="urxvt"
 
 -- Some basic settings
 ioncore.set{

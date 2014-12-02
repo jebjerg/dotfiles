@@ -16,4 +16,4 @@ dopath("mod_notionflux")
 dopath("mod_xrandr")
 dopath("mod_xinerama")
 
-dopath("look_dusky")
+dopath("look_redalert")
