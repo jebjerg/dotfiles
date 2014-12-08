@@ -7,7 +7,7 @@ defbindings("WScreen", {
 defbindings("WScreen", {
 	submap("Mod1+z", {
 		submap("z", {
-			kpress("z", "ioncore.exec('slock')"),
+			kpress("z", "ioncore.exec('i3lock && systemctl suspend')"),
 		}),
 	}),
 })
