@@ -13,13 +13,9 @@ set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
 
 " GOLANG
-au BufRead,BufNewFile *.go set filetype=go
-au BufRead,BufNewFile *.go :compiler go
 au FileType go setl sw=4 sts=4 noexpandtab
-set rtp+=/usr/local/go/misc/vim/
-set rtp+=/usr/share/go/misc/vim/
-autocmd BufWritePre *.go :silent Fmt
 let g:compiler_gcc_ignore_unmatched_lines = 1
+nnoremap <leader>gr :GoRun<CR>
 
 filetype plugin indent on
 syntax on
@@ -48,7 +44,7 @@ NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'kien/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
+" NeoBundle 'flazz/vim-colorschemes'
 
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
@@ -60,7 +56,6 @@ if !exists('g:airline_symbols')
 endif
 set laststatus=2
 set t_Co=256
-let g:airline_theme = 'luna'
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '>'
@@ -100,6 +95,10 @@ NeoBundle 'Raimondi/delimitMate'
 NeoBundle 'justinmk/vim-sneak'
 NeoBundle 'kien/ctrlp.vim'
 NeoBundle 'scrooloose/nerdcommenter'
+" NeoBundle 'KevinGoodsell/vim-csexact'
+" NeoBundle 'godlygeek/csapprox'
+" NeoBundle 'vim-scripts/guicolorscheme.vim'
+NeoBundle 'fatih/vim-go'
 
 " tagbar
 let g:tagbar_width = '20'
@@ -136,27 +135,14 @@ vnoremap <leader>64d c<c-r>=system('base64 --decode',@")<cr><esc>
 
 " colors
 set t_Co=256
-hi CursorLine ctermbg=7 cterm=bold
-hi CursorLineNr ctermfg=238 ctermbg=235
-hi LineNr ctermfg=7
-hi Constant ctermfg=2
-hi Statement ctermfg=1
-hi MatchParen ctermfg=8 ctermbg=none cterm=none
-hi TabLineFill term=bold cterm=bold ctermbg=none
-hi TabLine ctermfg=15 ctermbg=none cterm=none
-hi TabLineSel ctermfg=Black ctermbg=none cterm=none
-hi VertSplit ctermfg=235 ctermbg=235 cterm=none
-hi StatusLine cterm=none ctermfg=0 ctermbg=7
-hi StatusLineNC cterm=none ctermfg=235 ctermbg=235
-hi Normal ctermfg=7 ctermbg=none
-hi Directory ctermfg=4 cterm=none
-hi Folded ctermbg=235 cterm=none
-hi SpecialKey ctermfg=7
-hi Nontext ctermfg=7
-hi TagbarIcon ctermfg=red cterm=none
-hi TagbarHighlight ctermfg=red ctermbg=none
-hi TagbarScope ctermfg=blue ctermbg=none cterm=none
-hi TagbarKind ctermfg=blue ctermbg=none cterm=none
-hi TagbarNestedKind ctermbg=blue ctermbg=none cterm=none
+colorscheme monochrome
 
 autocmd FileType tex let b:tex_flavor = 'pdflatex'|compiler tex|set makeprg=pdflatex\ \-file\-line\-error\ \-interaction=nonstopmode\ %|set errorformat=%f:%l\ %m
+
+nnoremap <C-H> <C-W><C-H>
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+
+nnoremap <Leader>p :set paste<CR>
+nnoremap <Leader>np :set nopaste<CR>
