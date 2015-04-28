@@ -1,0 +1,36 @@
+# envars
+export TERM=xterm-256color
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/bin:/usr/bin/core_perl"
+export PATH="$PATH:/usr/lib/notion/bin"
+export PAGER='vimpager'
+export GOPATH=$HOME/go # Go
+export PATH=$PATH:$HOME/go/bin
+
+# options
+unsetopt inc_append_history
+unsetopt share_history
+setopt histignorespace
+setopt PROMPT_SUBST
+setopt auto_menu
+unset CASE_SENSITIVE
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+setopt local_options extended_glob
+
+# ssh
+eval $(keychain --eval --agents ssh --quiet $(ls $HOME/.ssh/*.pub | sed 's/\.pub//g' | xargs -L 1 echo -n " "))
+
+alias less=$PAGER
+[[ -z $DISPLAY && $XDG_VTNR -eq 1 ]] && exec startx
+
+# keybinds
+bindkey -v
+bindkey '^R' history-incremental-search-backward
+bindkey '^S' history-incremental-search-forward
+bindkey '^P' history-search-backward
+bindkey '^N' history-search-forward
+
+# theme
+[[ -f $HOME/.theme.zsh ]] && source $HOME/.theme.zsh
+
+# local stuff
+[[ -f $HOME/.local.zshrc ]] && source $HOME/.local.zshrc
