@@ -1,13 +1,13 @@
 -- custom keybinds
 defbindings("WScreen", {
-	submap("Mod1+Shift_L", {
-		kpress("s", "ioncore.exec('slock')"),
-	}),
+    submap("Mod1+Shift_L", {
+        kpress("l", "ioncore.exec('slock')"),
+    }),
 })
 defbindings("WScreen", {
 	submap("Mod1+z", {
 		submap("z", {
-			kpress("z", "ioncore.exec('i3lock && systemctl suspend')"),
+			kpress("z", "ioncore.exec('systemctl suspend; slock')"),
 		}),
 	}),
 })

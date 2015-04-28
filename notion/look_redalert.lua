@@ -13,8 +13,8 @@ de.reset()
 -- Base style
 de.defstyle("*", {
     -- e.g. inactive (not selected) tab in (in)active group
-    highlight_colour = "#e51717",
-    shadow_colour = "#e51717",
+    highlight_colour = "#000000",
+    shadow_colour = "#000000",
     background_colour = "#000000",
     foreground_colour = "#6b6b6b",
     
@@ -28,22 +28,27 @@ de.defstyle("*", {
     text_align = "center",
 })
 
+de.defstyle("frame", {
+    de.substyle("active", {
+        padding_colour = "#781011",
+    })
+})
 
 de.defstyle("tab", {
     font = "-*-helvetica-medium-r-normal-*-12-*-*-*-*-*-*-*",
     
     de.substyle("active-selected", {
         -- active tab in active group
-        highlight_colour = "#e51717",
-        shadow_colour = "#e51717",
-        background_colour = "#990000",
+        highlight_colour = "#781011",
+        shadow_colour = "#781011",
+        background_colour = "#781011",
         foreground_colour = "#eeeeee",
     }),
 
     de.substyle("inactive-selected", {
         -- active tab in inactive group
-        highlight_colour = "#e51717",
-        shadow_colour = "#e51717",
+        highlight_colour = "#000000",
+        shadow_colour = "#000000",
         background_colour = "#000000",
         foreground_colour = "#eeeeee",
     }),
@@ -55,7 +60,7 @@ de.defstyle("input", {
     spacing = 1,
     highlight_colour = "#e51717",
     shadow_colour = "#e51717",
-    background_colour = "#990000",
+    background_colour = "#781011",
     foreground_colour = "#eeeeee",
     
     de.substyle("*-selection", {
