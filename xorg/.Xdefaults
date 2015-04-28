@@ -1,40 +1,29 @@
+*color0: #2a2e33
+*color1: #b84d51
+*color10: #798431
+*color11: #e58a50
+*color12: #4b6b88
+*color13: #6e5079
+*color14: #4d7b74
+*color15: #5a626a
+*color2: #b3bf5a
+*color3: #e4b55e
+*color4: #6e90b0
+*color5: #a17eac
+*color6: #7fbfb4
+*color7: #b5b9b6
+*color8: #1d1f22
+*color9: #8d2e32
+
 *foreground:    #ddeedd
-*background:    #131D24
-
-!black
-*color0:    #25374A
-*color8:    #3A526B
-!red
-*color1:    #BD4A4A
-*color9:    #CC6666
-!green
-*color2: #99ab6f
-*color10: #acb792
-!yellow
-*color3:    #FEA63C
-*color11:   #FFE863
-!blue
-*color4: #495d6e
-*color12: #687987
-!magenta
-*color5:    #F26B9E
-*color13:   #ff5879
-!cyan
-*color6:    #72AD8C
-*color14:   #9FE3BC
-!white
-*color7:    #DDEEDD
-*color15:   #FFFFFF
-
+*background:    #000000
 
 URxvt*scrollBar: false
 URxvt*cursorUnderline: true
-URxvt*cursorColor: #CC6666
-URxvt*colorUL: #CC6666
-URxvt*internalBorder:7
+URxvt*cursorColor: #ff9900
+URxvt*colorUL: #ff9900
+URxvt*internalBorder: 1
 
-URxvt*font: xft:Liberation Mono:size=9
+URxvt*font: xft:DejaVu Sans Mono:style=Book:pixelsize=11
 URxvt*keysym.Home: \033[1~
 URxvt*keysym.End: \033[4~
-
-URxvt*letterSpace: -1

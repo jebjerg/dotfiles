@@ -1,6 +1,8 @@
-setxkbmap dk
+setxkbmap us
 [[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
 xmodmap $HOME/.Xmodmap
 feh --bg-max lockbg.a.png
-xrandr --output VGA-0 --left-of DVI-D-0
-exec notion
+autocutsel -fork &
+autocutsel -selection PRIMARY -fork &
+#xrandr --output DVI-D-0 --primary && exec openbox
+xrandr --output VGA-0 --left-of DVI-D-0 --rotate left --auto --primary && exec notion
