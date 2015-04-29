@@ -100,6 +100,8 @@ NeoBundle 'scrooloose/nerdcommenter'
 " NeoBundle 'vim-scripts/guicolorscheme.vim'
 NeoBundle 'fatih/vim-go'
 
+let NERDSpaceDelims = 1
+
 " tagbar
 let g:tagbar_width = '20'
 let g:tagbar_show_linenumbers = '0'
