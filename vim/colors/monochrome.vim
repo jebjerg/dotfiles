@@ -56,8 +56,8 @@ hi markdownHeadingDelimiter guifg=White ctermfg=15 guibg=Black ctermbg=16 gui=bo
 hi markdownHeadingRule guifg=White ctermfg=15 guibg=Black ctermbg=16 gui=bold cterm=bold term=bold
 hi markdownLinkText guifg=#ab6969 ctermfg=1 guibg=Black ctermbg=16 gui=underline cterm=underline term=underline
 hi Todo term=bold cterm=bold ctermfg=255 ctermbg=1 gui=bold guifg=White guibg=Red
-hi Pmenu guifg=White ctermfg=8 guibg=#ab6969 ctermbg=67 gui=NONE cterm=NONE term=NONE
-hi PmenuSel guifg=#ab6969 ctermfg=1 guibg=White ctermbg=15 gui=NONE cterm=NONE term=NONE
+hi Pmenu guifg=White ctermfg=8 guibg=#ab6969 ctermbg=1 gui=NONE cterm=NONE term=NONE
+hi PmenuSel guifg=#ab6969 ctermfg=1 guibg=White ctermbg=8 gui=NONE cterm=NONE term=NONE
 hi helpSpecial guifg=LightGray ctermfg=252 guibg=Black ctermbg=16 gui=NONE cterm=NONE term=NONE
 hi helpHyperTextJump guifg=#ab6969 ctermfg=1 guibg=Black ctermbg=16 gui=underline cterm=underline term=underline
 hi helpNote guifg=LightGray ctermfg=252 guibg=Black ctermbg=16 gui=NONE cterm=NONE term=NONE
