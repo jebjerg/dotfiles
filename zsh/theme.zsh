@@ -1,6 +1,6 @@
 autoload -U colors && colors
 [[ -f $HOME/.git.zsh ]] && source $HOME/.git.zsh
-PROMPT='%{$fg[cyan]%}%n%{$reset_color%} on %{$fg[yellow]%}%M%{$reset_color%} in %{$fg[blue]%}%~%b%{$reset_color%}$(git_time_since_commit)$(check_git_prompt_info) $ '
+PROMPT='%n %{$fg[red]%}on%{$reset_color%} %M %{$fg[red]%}in%{$reset_color%} %~%b%{$reset_color%}$(git_time_since_commit)$(check_git_prompt_info) %{$fg[red]%}$%{$reset_color%} '
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg[white]%}"
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%})"
