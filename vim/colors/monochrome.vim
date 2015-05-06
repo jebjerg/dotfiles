@@ -47,7 +47,7 @@ hi perlMatchStartEnd guifg=#ab6969 ctermfg=1 guibg=Black ctermbg=16 gui=NONE cte
 hi pythonEscape guifg=#ab6969 ctermfg=1 guibg=Black ctermbg=16 gui=NONE cterm=NONE term=NONE
 hi javaScriptFunction guifg=White ctermfg=15 guibg=Black ctermbg=16 gui=bold cterm=bold term=bold
 hi elixirDelimiter guifg=#ab6969 ctermfg=1 guibg=Black ctermbg=16 gui=NONE cterm=NONE term=NONE
-hi Search guifg=White ctermfg=8 guibg=#ab6969 ctermbg=67 gui=NONE cterm=NONE term=NONE
+hi Search term=NONE ctermfg=0 ctermbg=220 guifg=Black guibg=Yellow
 hi Visual guifg=White ctermfg=8 guibg=#ab6969 ctermbg=1 gui=NONE cterm=NONE term=NONE
 hi NonText guifg=DarkGray ctermfg=248 guibg=Black ctermbg=16 gui=NONE cterm=NONE term=NONE
 hi Directory guifg=White ctermfg=15 guibg=Black ctermbg=16 gui=bold cterm=bold term=bold

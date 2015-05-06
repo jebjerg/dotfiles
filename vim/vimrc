@@ -148,3 +148,5 @@ nnoremap <C-L> <C-W><C-L>
 
 nnoremap <Leader>p :set paste<CR>
 nnoremap <Leader>np :set nopaste<CR>
+
+set hlsearch
